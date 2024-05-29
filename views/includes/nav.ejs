@@ -1,0 +1,41 @@
+<nav class="nav nav-item">
+    <h1 class="text-xl font-semibold">NOTE BOARD</h1>
+    <form action="/search" method="POST" class="flex justify-center items-center gap-2">
+        <input class="nav-item border-2 rounded-xl" type="search" name="searchTerm" id="searchTerm" placeholder="Search" required />
+        <button type="submit">
+            <img src="/images/search2.svg" alt="search" class="h-9 w-9 ">
+            <!-- Search -->
+        </button>
+        
+    </form>
+    
+   
+    <div class="dropdown"  style="float:right;"> 
+        <img src="/images/user-icon.png" alt="user" class="profile" height="40px" width="40px">
+        <div class="dropdown-content"> 
+            <a class="text-teal-50 text-lg hover:underline" href="/user-profile">Profile</a>
+            <a class="text-teal-50 text-lg hover:underline" href="#">Settings</a>
+            <a class="text-teal-50 text-lg hover:underline" href="#">Help</a>   
+            <form action="/logout" method="post">
+                <button class="logout-btn  p-2 text-lg rounded-md bg-white text-indigo-900 hover:bg-indigo-300 hover:text-white " type="submit">Logout</button>
+            </form>
+               
+          
+        </div> 
+    </div>
+    
+
+</nav>
+
+<section class="side-menu rounded-r-xl bg-indigo-400 sm:w-11  md:w-11 lg:w-60">
+    <!-- <img class="side-menu-item" src="/images/note-icon.png" height="50px" width="50px" alt="Note-icon"> -->
+    <a class=" text-gray-100 " href="note-editor">
+        <span class="hidden sm:hidden md:hidden lg:inline-block  bg-indigo-500 p-2 mt-5 rounded-md  hover:bg-white hover:text-indigo-900">+ New Note</span> 
+       <img src="/images/add.png" class="w-10 h-10 mt-4  sm:block md:block lg:hidden" alt="New Note">
+    </a>
+    <a class=" text-white " href="/dashboard">
+       <span class="hidden sm:hidden md:hidden lg:inline-block p-2">My notes</span> 
+       <img src="/images/my-notes.png" class="w-10 h-10 sm:block md:block lg:hidden" alt="My Notes">
+    </a>
+    <img src="/images/note.svg" class="w-full h-full lg:block hidden" alt="">
+</section>

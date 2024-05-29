@@ -1,0 +1,39 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+    <main class=" flex justify-center w-full h-full bg-transparent" id="auth-page">
+        <div class="flex justify-center items-center w-2/3 h-auto" id="auth-form-container">
+            <form  class="flex flex-col justify-center items-center gap-3 m-4 p-4 border-2 w-1/2 rounded-md bg-indigo-400" action="/signup" class="auth-form" method="post">
+                <% if(errorMessage){ %>
+                    <div class='rounded-md bg-red-400 '>
+                        <%= errorMessage %>
+                    </div>
+                    <% } %>
+                <h1 class="pb-3 font-bold">Create your account to get started.</h1>
+                <label for="name">Name</label>
+                <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="text" name="name" placeholder="name" value="<%= oldInput.name %>">
+
+                <label for="email">Email</label>
+                <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="email" name="email" id="email" placeholder="email" value="<%= oldInput.email %>">
+                
+                <label for="password">Password</label>
+                <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="password" name="password" id="password" placeholder="password">
+                
+                <label for="confirmPassword">Confirm password</label>
+                <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm password">
+                
+                <button class="p-2 font-semibold rounded-md bg-indigo-700 text-white hover:bg-indigo-900 " type="submit">Signup</button>
+
+                <h3 class="p-2">Already have an account? <a class="p-2 font-semibold rounded-md bg-indigo-700 text-white hover:bg-indigo-900 " href="/login">[Log In Here]</a></h3>
+
+
+            </form>
+        </div>
+        
+        <div class="w-1/2 flex justify-center items-center" id="auth-image">
+            <img src="./images/signup.svg" class="p-16" alt="sign up">
+          </div>
+    </main>
+<%- include('./includes/end.ejs') %>

@@ -1,0 +1,17 @@
+<%- include('./includes/head.ejs') %>
+  </head>
+
+  <body>
+    <main class="flex justify-center items-center p-16">
+      <div class="flex flex-col justify-center gap-4 items-center p-8">
+        <img src="/images/user-icon.png" class="w-20 h-20" alt="User">
+        <h3><%= user.name %></h3>
+        <h4><%= user.email %></h4>
+        <h4>Notes = <%= notes %></h4>
+        <a href="/dashboard" class=" bg-indigo-500 p-2 mt-5 rounded-md  hover:bg-white hover:text-indigo-900 text-white">Back</a>
+      </div>
+     
+    </main>
+   
+
+    <%- include('./includes/end.ejs') %>

@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html, body {
+  height: 100%;
+  overflow-y: auto;
+}
+@media (max-width: 639px) {
+  /* Your CSS rules for screens smaller than 640px here */
+  #indexImage{
+    display: none;
+  }
+  #index-page{
+    flex-direction: column;
+  }
+  #index-icon{
+    width: 20rem;
+    height: 20rem;
+  }
+  #heroContent{
+    width: 70%;
+    padding: 1rem;
+  }
+}
+
+
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(224, 223, 255);
+  color: black;
+  background-repeat: no-repeat;
+}
+
+.home-page {
+  background-color: rgba(92, 92, 92, 0.445);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  padding: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width: 500px;
+}
+
+
+
+@media (min-width: 640px) and (max-width:1024px){
+  #indexImage{
+    display: none;
+  }
+  #index-page{
+    flex-direction: column;
+  }
+
+  #index-icon{
+    width: 20rem;
+    height: 20rem;
+  }
+
+  #heroContent{
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  #heroContent{
+    padding: 3rem;
+  }
+  #indexImage{
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,39 @@
+<%- include('./includes/head.ejs') %>
+  <link rel="stylesheet" href="/css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script>
+
+  </head>
+
+  <body>
+    <div class="contain">
+      <%- include('./includes/nav.ejs') %>
+
+        <div class="content editor-container m-8">
+          <form action="/note-editor" method="post" class="note-editor bg-indigo-400" >
+            <input type="text" name="title" id="title" placeholder="Title" value="<%= isEditing ? note.title : '' %>"  />
+            <div id="editorjs"></div>
+            <input type="hidden" name="editorData" id="editorData">
+            <%if(isEditing){ %>
+              <input type="hidden" name="noteId" value="<%= note._id %>">
+              <input type="hidden" name="editedNote" id="editedNote" value="<%= isEditing ? true : false %>" >
+            <% } %>
+            <button class="p-2 w-1/6 mx-auto rounded-xl bg-indigo-700 text-white hover:bg-white hover:text-indigo-900" id="saveButton" type="submit">Save</button>
+          </form>
+        </div>
+
+    </div>  
+    <script>
+      window.isEditing = '<%= isEditing %>';
+      if('<%= isEditing %>'){
+        window.oldInputData = '<%-JSON.stringify(note.content) %>';
+      }
+    </script>
+    <script src="/js/editor.js"></script>
+   
+  </body>
+
+  </html>

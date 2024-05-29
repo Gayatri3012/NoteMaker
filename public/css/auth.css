@@ -1,0 +1,27 @@
+/* .auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-style: none;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-weight: 400;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} */
+
+/* .user-message--error {
+    border: red;
+    border-radius: 8px;
+    background-color: rgba(255, 0, 0, 0.288);
+} */
+
+@media (max-width: 1023px) {
+    #auth-form-container {
+        width: 100%;
+    }
+    #auth-image{
+        display: none;
+    }
+}

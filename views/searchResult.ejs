@@ -1,0 +1,32 @@
+<%- include('./includes/head.ejs') %>
+  <link rel="stylesheet" href="/css/dashboard.css">
+  </head>
+
+  <body>
+   
+    <div class="contain  md:overflow-auto">
+      <%- include('./includes/nav.ejs') %>
+        <div class="content flex flex-col w-full h-full gap-6">
+                <h1 class="font-bold text-2xl">Results for <%= searchTerm %></h1>
+
+              <div class="flex flex-row flex-wrap justify-evenly items-center gap-6">
+                  <% for(let note of notes) { %>
+
+                <%
+                  let months = [
+                  "January", "February", "March",
+                  "April", "May", "June", "July",
+                  "August", "September", "October",
+                  "November", "December"
+                  ];
+                  %>
+            
+                  <a href="/note/<%= note._id %>" class="note-card" id="arrow">
+                    <h1 class="font-semibold uppercase" id="note-title"><%= note.title %></h1>
+                    <h3><%= note.formattedDate %></h3> 
+                  </a>  
+                                          
+            <% } %>
+        </div>
+
+    <%- include('./includes/end.ejs') %>

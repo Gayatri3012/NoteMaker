@@ -1,0 +1,24 @@
+<%- include('./includes/head.ejs') %>
+  <link rel="stylesheet" href="/css/dashboard.css">
+  </head>
+
+  <body>
+    <!-- <div class="flex justify-start px-2 ml-4" ><a href="/dashboard" class=" bg-indigo-500 p-2 mt-5 rounded-md  hover:bg-white hover:text-indigo-900 text-white">Back</a></div> -->
+    <div class="flex flex-col h-full justify-center items-center gap-2 bg-purple-200">
+    <div class="flex justify-start px-2" ><a href="/dashboard" class=" bg-indigo-500 p-2 mt-5  rounded-md  hover:bg-white hover:text-indigo-900 text-white">Back</a></div>
+     
+        <div class="flex flex-col justify-center items-center gap-2 text-center overflow-y-auto p-4 w-1/3 md:w-1.5/3 h-1/3 bg-white rounded-xl">
+          <h1 class="text-xl font-semibold uppercase"><%= title %></h1>
+          <%- html %>
+        </div> 
+        <div id="note-btn" class="mt-2 flex justify-center items-center gap-3">
+            <a class=" w-20 p-2 text-xl rounded-md bg-indigo-500 text-white hover:bg-indigo-700" href="/note-editor/<%= id %>">Edit</a>
+            <form action="/delete-note" method="POST">
+              <input type="hidden" value="<%= id %>" name="noteId">
+              <button class="w-20 p-2 text-xl rounded-md bg-indigo-500 text-white hover:bg-indigo-700" type="submit" margin="0px">Delete</button>
+          </form>
+        </div>
+      
+    </div>
+
+    <%- include('./includes/end.ejs') %>

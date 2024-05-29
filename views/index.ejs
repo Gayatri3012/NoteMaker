@@ -1,0 +1,29 @@
+<%- include('./includes/head.ejs') %>
+  </head>
+
+  <body>
+    <main id="index-page" class="flex flex-row h-full justify-evenly items-center w-full bg-transparent">
+      <div id="index-icon"><img src="./images/index2.svg"  alt=""></div>
+      <div id="heroContent" class="flex flex-col justify-center items-center gap-8  mt-2 w-1/2">
+        <h1 class="font-semibold text-2xl uppercase">Welcom to noteboard</h1>
+        <p class="text-xl">
+          Welcome to NoteBoard! NoteBoard is a powerful note-making application
+          designed to help you organize your thoughts, ideas, and tasks
+          effortlessly. Whether you're jotting down quick reminders, or drafting
+          detailed project plans, our application has you covered.
+        </p>
+        <p class="text-xl">
+          If you're new here, simply click the "Sign Up" button to create an
+          account and start organizing your thoughts with ease. If you're already
+          a member, log in to access your notes and unleash your productivity!
+        </p>
+        <div id="auth-button-container">
+          <a href="/signup" class="p-2 font-semibold rounded-md bg-indigo-500 text-white hover:bg-indigo-700">Get Started!</a>
+        </div>
+      </div>
+      <div id="indexImage" class="w-1/2 flex justify-center items-center">
+        <img src="./images/index2.svg" class=" p-8" alt="">
+      </div>
+    </main>
+
+    <%- include('./includes/end.ejs') %>
