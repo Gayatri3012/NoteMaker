@@ -54,11 +54,13 @@ exports.noteEditor = (req, res, next) => {
 exports.postNoteEditor = (req, res, next) => {
     console.log(req.body);
     const editorData = req.body.editorData;
+    const editedTitle = req.body.editedNoteTitle;
     console.log(editorData); 
     if(req.body.editedNote === 'true'){
         Note.findById(req.body.noteId)
         .then(note => {
             note.content = editorData; 
+            note.title = editedTitle;
             note.save()
             .then(result => {
                 console.log('note edited successfully!');

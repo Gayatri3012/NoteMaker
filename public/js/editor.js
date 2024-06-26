@@ -52,11 +52,14 @@ if (window.isEditing === 'true') {
 
 const saveButton = document.querySelector('#saveButton');
 const editorDataInput = document.querySelector('#editorData');
+const editedNoteTitle = document.querySelector('#editedNoteTitle');
+
 
 saveButton.addEventListener('click', () => {
     editor
         .save()
         .then((outputData) => {
+            editedNoteTitle.value = document.querySelector('#title').value;
             const jsonData = JSON.stringify(outputData);
             editorDataInput.value = jsonData;
         }).catch((error) => {

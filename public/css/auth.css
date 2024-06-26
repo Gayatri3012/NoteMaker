@@ -25,3 +25,10 @@ input {
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    #auth-form-container form {
+      width: 80%;
+      margin: 20px;
+    }
+  }

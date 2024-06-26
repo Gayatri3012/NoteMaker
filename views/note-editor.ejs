@@ -16,12 +16,13 @@
           <form action="/note-editor" method="post" class="note-editor bg-indigo-400" >
             <input type="text" name="title" id="title" placeholder="Title" value="<%= isEditing ? note.title : '' %>"  />
             <div id="editorjs"></div>
+            <input type="hidden" name="editedNoteTitle" id="editedNoteTitle" />
             <input type="hidden" name="editorData" id="editorData">
             <%if(isEditing){ %>
               <input type="hidden" name="noteId" value="<%= note._id %>">
               <input type="hidden" name="editedNote" id="editedNote" value="<%= isEditing ? true : false %>" >
             <% } %>
-            <button class="p-2 w-1/6 mx-auto rounded-xl bg-indigo-700 text-white hover:bg-white hover:text-indigo-900" id="saveButton" type="submit">Save</button>
+            <button class="p-2  w-14 mx-auto rounded-xl bg-indigo-700 text-white hover:bg-white hover:text-indigo-900" id="saveButton" type="submit">Save</button>
           </form>
         </div>
 
