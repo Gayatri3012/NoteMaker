@@ -95,6 +95,8 @@ main {
     .contain{
         grid-template-columns: 44px auto;
     }
+
+    
 }
 
 @media (min-width: 640px) and (max-width:1024px){
@@ -149,6 +151,17 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     /* white-space: wrap; */
+}
+
+@media (max-width: 639px){
+    #note-date {
+        display: none;
+    }
+
+    .note-card {
+        height: 80px;
+        width: 150px;
+    }
 }
 
 .pagination {

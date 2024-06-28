@@ -11,12 +11,13 @@
                         <%= errorMessage %>
                     </div>
                     <% } %>
-                <h1 class="pb-3 font-bold">Create your account to get started.</h1>
+                <h1 class="pb-3 font-bold text-xl">Sign up</h1>
+                <p class="pb-3">Create your account to get started</p>
                 <label for="name">Name</label>
-                <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="text" name="name" placeholder="name" value="<%= oldInput.name %>">
+                <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="text" name="name" placeholder="Enter your name" value="<%= oldInput.name %>">
 
                 <label for="email">Email</label>
-                <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="email" name="email" id="email" placeholder="email" value="<%= oldInput.email %>">
+                <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="email" name="email" id="email" placeholder="Enter your email address" value="<%= oldInput.email %>">
                 
                 <label for="password">Password</label>
                 <input class="w-full bg-gray-200 p-2 rounded-md text-gray-700" type="password" name="password" id="password" placeholder="password">
@@ -26,8 +27,7 @@
                 
                 <button class="p-2 font-semibold rounded-md bg-indigo-700 text-white hover:bg-indigo-900 " type="submit">Signup</button>
 
-                <h3 class="p-2">Already have an account? <a class="px-2 py-1 font-semibold rounded-md bg-indigo-700 text-white hover:bg-indigo-900 " href="/login">[Log In Here]</a></h3>
-
+                <p class="p-2">Already have an account?   <a href="/login" class="text-white hover:text-indigo-700 font-medium">[Log In Here]</a></p>
 
             </form>
         </div>
